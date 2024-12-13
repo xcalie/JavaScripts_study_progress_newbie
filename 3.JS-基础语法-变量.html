@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 变量
+        var a = 1;
+        var b = 2;
+        var c = a + b;
+        //正常定义的变量是全局变量
+        {
+            var d = 3;
+            let e = 4; //块级作用域 带着let就是局部变量
+            const f = 5; //常量
+            console.log(e);
+            console.log(f);
+        }
+        console.log(c);
+        console.log(d);
+        // console.log(e); //报错
+        // console.log(f); //报错
+    </script>
+</body>
+</html>

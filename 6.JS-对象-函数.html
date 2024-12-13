@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数</title>
+</head>
+<body>
+    <script>
+        function sayHello(){
+            console.log('Hello JS');
+        }
+        var sayHi = function(){
+            console.log('Hi JS');
+        }
+
+        var function1 = sayHello;
+
+        function add(a, b){
+            return a + b;
+        }
+        var sum = add(1, 2);
+        console.log(sum);
+
+        var sum1 = add(1,2,23,4);//多余的参数不会报错，只会取前两个参数
+        console.log(sum1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 运算符
+        /*
+        算数运算符： + - * / % ++ --
+        赋值运算符： = += -= *= /= %=
+        比较运算符： == === != !== > < >= <=
+        逻辑运算符： && || !
+        三元运算符： ? :
+        字符串运算符： +
+
+        其中 == 和 === 的区别：
+        == 会进行类型转换，再比较
+        === 不会进行类型转换，直接比较
+        */
+        var agr = 20;//number
+        var _agr = "20";//string
+        var $agr = 20;//number
+
+        console.log(agr == _agr); //true
+        console.log(agr === _agr); //false
+        console.log(agr === $agr); //true 
+
+        //类型转换
+        console.log(parseInt("123")); //123
+        console.log(parseFloat("123.456")); //123.456
+        console.log(parseInt("123.456")); //123
+
+        //类型转换 其他类型转换为boolean
+        // if 在一般情况下，只要不是0、""、null、undefined、NaN、false，都会转换为true
+        console.log(Boolean(0)); //false                        重点
+        console.log(Boolean(1)); //true
+        console.log(Boolean("")); //false
+        console.log(Boolean("abc")); //true
+        console.log(Boolean(null)); //false
+        console.log(Boolean(undefined)); //false
+        console.log(Boolean(NaN)); //false                      重点
+        console.log(Boolean(Infinity)); //true
+        console.log(Boolean(-Infinity)); //true
+        console.log(Boolean({})); //true
+        console.log(Boolean([])); //true
+        console.log(Boolean(function(){})); //true
+    </script>
+</body>
+</html>
