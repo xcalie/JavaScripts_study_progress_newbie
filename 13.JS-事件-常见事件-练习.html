@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <img id="hl" src="img/1.jpg"> <br> <br>
+    <form action="">
+        <input type="button" value="图1" onclick="change(1)">
+        <input type="button" value="图2" onclick="change(2)">
+    </form>
+
+    <br><br><br>
+
+    <form action="">
+        <input type="text" id="inputName" value="ItCast" onfocus="InToUp()" onblur="OutToLow()">
+    </form>
+
+    <br><br><br>
+
+    <form action="">
+        <input type="checkbox" name="hobby"> 电影
+        <input type="checkbox" name="hobby"> 音乐
+        <input type="checkbox" name="hobby"> 美食 <br> <br>
+    </form>
+    
+    <input type="button" value="全选" onclick="checkAll()">
+    <input type="button" value="反选" onclick="checkAfter()">
+    
+</body>
+<script>
+    var img = document.getElementById("hl");
+    function change(imgToChange) {
+        img.src = "img/" + imgToChange + ".jpg";
+    }
+
+    function InToUp() {
+        var text = document.getElementById("inputName");
+        text.value = text.value.toUpperCase();
+    }
+    function OutToLow() {
+        var text = document.getElementById("inputName");
+        text.value = text.value.toLowerCase();
+    }
+
+    function checkAll() {
+        var hobby = document.getElementsByName("hobby");
+        for (var i = 0; i < hobby.length; i++) {
+            hobby[i].checked = true;
+        }
+    }
+
+    function checkAfter() {
+        var hobby = document.getElementsByName("hobby");
+        for (var i = 0; i < hobby.length; i++) {
+            hobby[i].checked = !hobby[i].checked;
+        }
+    }
+
+</script>
+</html>

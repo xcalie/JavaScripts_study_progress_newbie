@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        //字符串的定义
+        var str = "hello world";
+        console.log(str);
+
+        //字符串的长度 length属性
+        console.log(str.length);
+
+        //字符串的遍历 for循环
+        for(var i = 0; i < str.length; i++){
+            console.log(str[i]);
+        }
+
+        //字符串的拼接 + 运算符
+        var str1 = "hello";
+        var str2 = "world";
+        var str3 = str1 + str2;
+        console.log(str3);
+
+        //字符串的截取 substring方法 从1开始截取到3
+        var str4 = str3.substring(1,3);
+        console.log(str4);
+
+        //字符串的截取 slice方法 从1开始截取到3
+        var str4 = str3.slice(1,3);
+        console.log(str4);
+
+        //字符串的查找 indexOf方法
+        var index = str3.indexOf("o");
+        console.log(index);
+
+        //字符串的替换 replace方法
+        var str5 = str3.replace("o","0");
+        console.log(str5);
+
+        //字符串的大小写转换 toUpperCase方法 toLowerCase方法
+        var str6 = "HELLO";
+        var str7 = str6.toLowerCase();
+        console.log(str7);
+        var str8 = str7.toUpperCase();
+        console.log(str8);
+
+        //字符串的分割 split方法
+        var str9 = "hello world";
+        var arr = str9.split(" ");
+        console.log(arr);
+
+        //字符串的比较 localeCompare方法
+        var str10 = "hello";
+        var str11 = "world";
+        var result = str10.localeCompare(str11);
+        console.log(result);
+
+        //字符串的连接 join方法
+        var arr1 = ["hello","world"];
+        var str12 = arr1.join(" ");
+        console.log(str12);
+
+        //字符串的去空格 trim方法
+        var str13 = " hello world ";
+        console.log(str13.trim());
+
+        //字符串的转义 \n 换行符
+        var str14 = "hello\nworld";
+        console.log(str14);
+
+        //字符串的模板 `` 作用是可以在字符串中嵌入变量
+        var str15 = "hello";
+        var str16 = `world ${str15}`;
+        console.log(str16);
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // JSON.stringify() 方法用于将 JavaScript 值转换为 JSON 字符串。
+        // JSON.parse() 方法用于将一个 JSON 字符串转换为对象。
+        var obj = {
+            name: "runoob",
+            alexa: 10000,
+            site: "www.runoob.com",
+
+            printf: function () {
+                console.log(this.name + " " + this.alexa + " " + this.site);
+            }
+        };
+        var myJSON = JSON.stringify(obj);
+        console.log(myJSON);
+        var myObj = JSON.parse(myJSON);
+        console.log(myObj);
+
+        myObj.printf();//调用对象的方法
+
+
+        // 定义Json
+        var json = {
+            "name": "runoob",
+            "alexa": 10000,
+            "site": "www.runoob.com"
+        };
+        // 转换为字符串
+        var myJSON = JSON.stringify(json);
+        console.log(myJSON);
+        // 转换为对象
+        var myObj = JSON.parse(myJSON);
+        console.log(myObj);
+
+        window.alert(myObj.name);
+
+        // JSON 对象
+        // JSON 对象用于处理 JSON 数据。
+        // JSON 对象在所有现代浏览器中都是原生的。
+        // JSON 对象可以将 JavaScript 对象转换为 JSON 字符串。
+        // JSON 对象可以将 JSON 字符串转换为 JavaScript 对象。
+        // JSON 对象支持的方法：
+        // JSON.parse() 用于将一个 JSON 字符串转换为 JavaScript 对象。
+        // JSON.stringify() 用于将 JavaScript 对象转换为 JSON 字符串。
+        // JSON 对象不支持的方法：
+        // JSON.stringify() 方法会把对象的方法忽略掉。
+        // JSON.stringify() 方法会把 undefined 转换为 null。
+        // JSON.stringify() 方法会把任何实现了 toJSON() 方法的对象转换为 JSON 字符串。
+        // JSON.stringify() 方法会把 Date 对象转换为字符串。
+        // JSON.stringify() 方法会把 RegExp 对象转换为空对象。
+        // JSON.stringify() 方法会把 Symbol 对象转换为 undefined。
+        // JSON.stringify() 方法会忽略 undefined。
+        // JSON.stringify() 方法会忽略任何属性值为 undefined 的属性。
+        // JSON.stringify() 方法会忽略 symbol 属性。
+        // JSON.stringify() 方法会忽略函数。
+        // JSON.stringify() 方法会忽略 undefined。
+        // JSON.stringify() 方法会忽略任何属性值为 undefined 的属性。
+        // JSON.stringify() 方法会忽略 symbol 属性。
+        // JSON.stringify() 方法会忽略函数。
+
+        // JSON 对象的方法
+        // JSON.parse() 方法用于将一个 JSON 字符串转换为对象。
+        // JSON.stringify() 方法用于将 JavaScript 值转换为 JSON 字符串。
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <script>
+        // BOM 浏览器对象模型
+        // BOM 是浏览器对象模型，提供了独立于内容的、与浏览器窗口进行交互的对象结构。
+        // BOM 由多个对象组成，比如：window、document、location、history、screen、navigator 等对象。
+        // window 对象
+        // window 对象表示浏览器中打开的窗口。
+        // 所有的全局 JavaScript 对象、函数以及变量均自动成为 window 对象的成员。
+        // window 对象不需要使用 new 关键字来创建。
+        // window 对象是 BOM 的顶层对象，所有的全局变量和函数都是 window 对象的属性和方法。
+        
+        // window 对象的属性
+        // history 对象 history 对象包含用户（在浏览器窗口中）访问过的 URL。
+        // location 对象 location 对象用于获取或设置窗体的 URL，以及跳转到新的页面。
+        // navigator 对象 navigator 对象包含有关访问者浏览器的信息。
+        // screen 对象 screen 对象包含有关访问者屏幕的信息。
+        
+        // window 对象的方法
+        // alert() 方法显示带有一段消息和一个确认按钮的警告框。
+        // confirm() 方法显示带有一段消息以及确认和取消按钮的对话框。
+        // prompt() 方法显示可提示用户输入的对话框。
+        // open() 方法打开一个新的浏览器窗口或查找一个已命名的窗口。
+        // close() 方法关闭浏览器窗口。
+        // setInterval() 方法按照指定的周期（以毫秒计）来调用函数或计算表达式。
+        // setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。
+
+
+        // 获取window
+        //方法 alert() 显示一个带有指定消息和一个确定按钮的警告框。
+        //window.alert("hello world");
+        //alert("hello world");
+
+        //方法 confirm() 显示一个带有指定消息和确认按钮的对话框。
+        //window.confirm("hello world");
+
+        //方法 prompt() 显示可提示用户输入的对话框。
+        //window.prompt("hello world");
+
+        //方法 open() 方法用于打开一个新的浏览器窗口或查找一个已命名的窗口。
+        //window.open("http://www.baidu.com");
+
+        //方法 close() 方法关闭由 open() 方法打开的窗口。
+        // window.close();
+
+
+        var num = 0;
+        //方法 setInterval() 方法调用函数或计算表达式，并返回一个 ID。setInterval() 方法会按照指定的周期（以毫秒计）来调用函数或计算表达式。(循环执行)
+        var myVar = setInterval(function(){ 
+            alert(num); 
+            num++;
+            if(num == 3){
+                clearInterval(myVar);
+            }
+        }, 3000);
+
+        //方法 clearInterval() 方法用于停止 setInterval() 方法执行的函数代码。
+        //clearInterval(myVar);
+
+        //方法 setTimeout() 方法用于在指定的毫秒数后调用函数或计算表达式。(只会执行一次)
+        //setTimeout(function(){ alert("Hello"); }, 3000);
+
+
+        // location 对象
+        // location 对象用于获取或设置窗体的 URL，以及跳转到新的页面。
+        
+        alert(location.href);
+        location.href = "http://www.baidu.com";
+    </script>
+</body>
+</html>

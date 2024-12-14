@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见事件</title>
+</head>
+<body onload="load()">
+    <!-- 事件 -->
+     <!--常见事件类型
+        1.鼠标事件
+            onclick 单击
+            ondblclick 双击
+            onmouseover 鼠标移入
+            onmouseout 鼠标移出
+            onmousedown 鼠标按下
+            onmouseup 鼠标抬起
+            onmousemove 鼠标移动
+        2.键盘事件
+            onkeydown 键盘按下
+            onkeyup 键盘抬起
+            onkeypress 键盘按下并抬起
+        3.表单事件
+            onfocus 获得焦点
+            onblur 失去焦点
+            onchange 内容改变
+            onsubmit 提交表单
+        4.窗口事件
+            onload 加载完成
+            onresize 窗口大小改变
+            onscroll 滚动条滚动
+        5.其他事件
+            onselect 文本选中
+            oncopy 复制
+            oncut 剪切
+            onpaste 粘贴
+            oncontextmenu 右键菜单
+            onerror 错误
+    -->
+    <form action="" style="text-align: center;" onsubmit="subfn()">
+        <input type="text" name="username" onblur="bfn()" onfocus="ffn" onkeydown="kfn"> <br> <br>
+
+        <input id="bl" type="submit" value="提交">
+
+        <input id="bl" type="button" value="单机事件" onclick="fnl()">
+    </form>
+
+    <br><br><br>
+
+    <table width="800px" border="1" align="center" onmousedown="over()" onmouseout="out()">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>分数</th>
+            <th>评语</th>
+        </tr>
+        <tr align="center">
+            <th>001</th>
+            <th>张三</th>
+            <th>90</th>
+            <th>优秀</th>
+        </tr>
+        <tr align="center">
+            <th>002</th>
+            <th>李四</th>
+            <th>80</th>
+            <th>良好</th>
+        </tr>
+    </table>
+</body>
+<script>
+    function load() {
+        alert("页面加载完成！");
+    }
+
+    function subfn() {
+        alert("提交成功！");
+    }
+
+    function bfn() {
+        alert("失去焦点！");
+    }
+
+    function ffn() {
+        alert("获得焦点！");
+    }
+
+    function kfn() {
+        alert("按下键盘！");
+    }
+
+    function fnl() {
+        alert("单机事件！");
+    }
+
+    function over() {
+        alert("鼠标按下！");
+    }
+
+    function out() {
+        alert("鼠标移出！");
+    }
+</script>
+
+</html>
