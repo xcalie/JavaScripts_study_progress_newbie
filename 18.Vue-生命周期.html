@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue生命周期</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message">
+        {{ message }}
+        
+    </div>
+</body>
+<script>
+    // 创建一个 Vue 实例
+    new Vue({
+        el: "#app",
+        data: {
+            message: "Hello Vue!"
+        },
+        beforeCreate() {
+            console.log("beforeCreate");
+        },
+        created() {
+            console.log("created");
+        },
+        beforeMount() {
+            console.log("beforeMount");
+        },
+        mounted() {
+            console.log("mounted");// mounted 之后，页面中的数据才会被渲染（只需要掌握这个）
+        },
+        beforeUpdate() {
+            console.log("beforeUpdate");
+        },
+        updated() {
+            console.log("updated");
+        },
+        beforeDestroy() {
+            console.log("beforeDestroy");
+        },
+        destroyed() {
+            console.log("destroyed");
+        }
+    })
+</script>
+</html>

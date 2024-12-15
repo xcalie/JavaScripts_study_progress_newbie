@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue指令练习</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form action="">
+            <table border="1" align="center" width="500"  cellpadding="10"> 
+                <tr>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>年龄段</th>
+                    <th>性别</th>
+                    <th>成绩</th>
+                    <th>成绩等级</th>
+                    
+                </tr>
+                <tr v-for="stu in students">
+                    <td>{{ stu.name }}</td>
+                    <td>{{ stu.age }}</td>
+                    <td>
+                        <span v-if="stu.age < 18">未成年人</span> 
+                        <span v-else if="stu.age >= 18 && stu.age < 60">成年人</span>
+                        <span v-else>老年人</span>
+                    </td>
+                    <td>
+                        <span v-if="stu.gender==1">男</span>
+                        <span v-else>女</span>
+                    </td>
+                    <td>{{ stu.score }}</td>
+                    <td>
+                        <span v-if="stu.score >= 90">优秀</span>
+                        <span v-else if="stu.score >= 80 && stu.score < 90">良好</span>
+                        <span v-else if="stu.score >= 60 && stu.score < 80">及格</span>
+                        <span v-else>不及格</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            students: [
+                {
+                    name: "张三",
+                    age: 16,
+                    gender: 1,
+                    score: 80,
+                },
+                {
+                    name: "李四",
+                    age: 20,
+                    gender: 0,
+                    score: 90,
+                },
+                {
+                    name: "王五",
+                    age: 22,
+                    gender: 1,
+                    score: 70,
+                },
+                {
+                    name: "赵六",
+                    age: 24,
+                    gender: 0,
+                    score: 60,
+                }
+            ]
+        }
+    })
+</script>
+</html>

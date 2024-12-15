@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue指令</title>
+    <script src="js/Vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="age">
+        {{ age }}
+
+        <br>
+
+        <span v-if="age >= 18">成年人</span>
+        <span v-else>未成年人</span>
+        
+        <br>
+
+        <span v-show="age >= 18">成年人</span>
+        <span v-show="age < 18">未成年人</span>
+
+        <br><br>
+
+        <div v-for="addr in addrs">
+            {{ addr }}
+        </div>
+
+        <br><br>
+
+        <div v-for="(addr, index) in addrs">
+            {{ index + 1 }}. {{ addr }}
+        </div>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            url: "https://www.baidu.com",
+            textUrl: "Hallo Vue!",
+            age: 18,
+            addrs: ["北京", "上海", "广州", "深圳"],
+        },
+        methods: {
+            show(textShow) {
+                alert(textShow);
+            }
+        }
+    });
+</script>
+</html>
